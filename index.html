@@ -15,7 +15,16 @@
   object-fit: cover;
   border: 3px solid var(--teal);
   margin-bottom: 25px;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
+
+.profile-pic:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(100,255,218,0.6);
+  filter: brightness(1.1);
+}
+
     :root {
       --navy:       #0a0f1e;
       --navy-light: #112240;
@@ -139,15 +148,43 @@
 
     /* SOCIAL */
     .social-links {
-      display: flex; gap: 20px;
-      align-items: center;
-    }
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 10px;
+}
 
-    .social-links a {
-      color: var(--slate);
-      transition: var(--transition);
-      display: flex; align-items: center;
-    }
+.social-links a {
+  color: var(--slate-light);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-links svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+.social-links a:hover {
+  color: var(--teal);
+  transform: translateY(-4px) scale(1.1);
+}
+
+.social-links a:hover svg {
+  filter: drop-shadow(0 0 8px rgba(100,255,218,0.45));
+}
+
+    .social-links a:hover {
+  color: var(--slate-light);
+  transform: translateY(-6px) scale(1.15);
+  background: rgba(100,255,218,.08);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(100,255,218,.25);
+}
 
     .social-links a:hover { color: var(--teal); transform: translateY(-3px); }
 
@@ -587,7 +624,12 @@
       <h1 class="name">Kunal<span>.</span></h1>
       <p class="tagline">AI & Data Science Student</p>
       <p class="bio-short">B.Tech student in AI & Data Science. Open to internships in AI/ML, Frontend, Backend, and Full Stack development.</p>
-
+<a href="Kunal_Resume.pdf"
+   target="_blank"
+   class="btn"
+   style="margin-bottom:30px; display:inline-block;">
+   📄 View Resume
+</a>
       <nav class="nav" aria-label="Page navigation">
         <a href="#about" class="nav-item active" data-section="about">
           <span class="nav-line"></span>About
